@@ -1,0 +1,54 @@
+.Quantity {
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: rgb(152, 174, 236);
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.Quantity:hover {
+    background-color: rgb(89, 86, 221);
+}
+
+.btn btn-sm btn-primary {
+    border: 2px solid #E1E8EE;
+    border-radius: 6px;
+    padding: 13px 20px;
+    font-size: 14px;
+    color: #5E6977;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.btn btn-sm btn-primary:hover,
+.btn btn-sm btn-primary:active,
+.btn btn-sm btn-primary:focus {
+    border: 2px solid #86939E;
+    outline: none;
+}
+
+.btn btn-sm btn-secondary {
+    border: 2px solid #E1E8EE;
+    border-radius: 6px;
+    padding: 13px 20px;
+    font-size: 14px;
+    color: #5E6977;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.btn btn-sm btn-secondary:hover,
+.btn btn-sm btn-secondary:active,
+.btn btn-sm btn-secondary:focus {
+    border: 2px solid #86939E;
+    outline: none;
+}

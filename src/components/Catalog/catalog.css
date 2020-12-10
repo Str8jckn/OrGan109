@@ -1,0 +1,8 @@
+.btn-category {
+    display: inline-block;
+    width: 170px;
+    height: 50px;
+    border: 1px solid burlywood;
+    margin-bottom: 15px;
+    font-family: sans-serif;
+}
