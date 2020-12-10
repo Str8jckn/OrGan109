@@ -9,9 +9,7 @@ class Navbar extends Component {
         className="navbar navbar-expand-lg navbar-dark"
         style={{ backgroundColor: "#015d87" }}
       >
-        <Link className="navbar-brand" href="/#">
-          Navbar
-        </Link>
+        <Link className="navbar-brand" href="/#"></Link>
         <button
           className="navbar-toggler"
           type="button"
