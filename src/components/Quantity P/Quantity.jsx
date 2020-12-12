@@ -28,14 +28,15 @@ class Quantity extends Component {
     current += 1;
 
     this.setState({ qnty: current });
-    this.props.onValueChange();
+    this.props.onValueChange(current);
   };
   decrease = () => {
-    var Current = this.state.qnty;
-    Current -= 1 && Current > 1;
-
-    this.setState({ qnty: Current });
-    this.props.onValueChange();
+    var current = this.state.qnty - 1;
+    //Current -= 1 && Current > 1;//
+    if (current > 0) {
+      this.setState({ qnty: current });
+      this.props.onValueChange(current);
+    }
   };
 }
 

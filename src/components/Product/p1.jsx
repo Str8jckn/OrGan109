@@ -4,8 +4,7 @@ import "./p1.css";
 
 class Product extends Component {
   state = {
-    total: 0,
-    qnty: 1,
+    quantity: 1,
   };
   render() {
     return (
@@ -14,7 +13,7 @@ class Product extends Component {
         <h4>{this.props.data.title}</h4>
         <div>
           <label className="script">Description</label>
-          <label className="total">${this.props.data.price.toFixed(2)}</label>
+          <label className="total">${this.getTotal()}</label>
         </div>
         <label className="price">${this.props.data.price.toFixed(2)}</label>
         <Quantity
@@ -25,7 +24,7 @@ class Product extends Component {
     );
   }
   getTotal = () => {
-    return (this.price.data.price * this.state.quantity).toFixed(2);
+    return (this.props.data.price * this.state.quantity).toFixed(2);
   };
   handleQuantityChange = (qnty) => {
     this.setState({ quantity: qnty });
