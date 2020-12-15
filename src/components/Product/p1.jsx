@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import Quantity from "../Quantity P/Quantity";
 import "./p1.css";
+import { increaseCounter, addProdToCart } from "../../store/actions/actions";
 
 class Product extends Component {
   state = {
@@ -19,10 +21,24 @@ class Product extends Component {
         <Quantity
           onValueChange={(qnty) => this.handleQuantityChange(qnty)}
         ></Quantity>
-        <button className="btn btn-lg btn-primary">Add</button>
+        <button onClick={this.addProd} className="btn btn-lg btn-primary">
+          Add
+        </button>
       </div>
     );
   }
+
+  addProd = () => {
+    this.props.increaseCounter();
+    this.props.addProdToCart();
+
+    var addedProduct = {
+      product: this.props.data,
+      quantity: this.state.quantity,
+    };
+    this.props.addProdToCart(addedProduct);
+  };
+
   getTotal = () => {
     return (this.props.data.price * this.state.quantity).toFixed(2);
   };
@@ -42,4 +58,4 @@ decrease = () => {
   Current -= 1 && Current > 1;
 
   this.setState({ qnty: Current });*/
-export default Product;
+export default connect(null, { increaseCounter, addProdToCart })(Product);
