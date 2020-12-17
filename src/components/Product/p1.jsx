@@ -30,7 +30,6 @@ class Product extends Component {
 
   addProd = () => {
     this.props.increaseCounter();
-    this.props.addProdToCart();
 
     var addedProduct = {
       product: this.props.data,

@@ -46,9 +46,9 @@ class Catalog extends Component {
   setCategory = (cat) => {
     this.setState({ selectedCategory: cat });
   };
-  componentDidMount() {
+  async componentDidMount() {
     let service = new ProductService();
-    const data = service.getProducts();
+    const data = await service.getProducts();
     let categories = [];
 
     for (let i = 0; i < data.length; i++) {

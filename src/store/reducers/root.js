@@ -1,9 +1,8 @@
 import cartCountRedux from "./cartcount";
+import { combineReducers } from "redux";
 import cartProdRedux from "./cartprod";
 
-const { combineReducers } = require("redux");
-
-const { default: cart } = require("../../components/cart/cart");
+//const { combineReducers } = require("redux");//
 
 const rootRedux = combineReducers({
   count: cartCountRedux,
