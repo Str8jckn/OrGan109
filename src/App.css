@@ -1,13 +1,14 @@
 .App {
-  text-align: center;
+  text-align: right;
   height: 100%;
   width: 100%;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: fantasy;
   max-width: 120px;
   margin: 0 auto;
   padding: 15px;
   display: flex;
+  font-size: larger;
 }
 
 .App-logo {

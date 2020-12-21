@@ -35,3 +35,8 @@
 .btn btn-lg btn-primary:hover {
     background-color: #64af3d;
 }
+
+btn btn-outline-secondary my-2 my-sm-0 {
+
+    color: whitesmoke;
+}
